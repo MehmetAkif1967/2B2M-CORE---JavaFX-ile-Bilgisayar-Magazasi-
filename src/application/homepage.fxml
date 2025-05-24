@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="600" prefWidth="900" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.homepage_con">
+
+    <!-- Üst Menü -->
+    <HBox alignment="CENTER_LEFT" prefHeight="80" spacing="40" style="-fx-background-color: #0d47a1;" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
+        <padding>
+            <Insets bottom="20" left="30" right="30" top="20" />
+        </padding>
+        <Label style="-fx-font-size: 28px; -fx-text-fill: white; -fx-font-weight: bold;" text="2B2M CORE" />
+        <Button fx:id="Hazirsistem" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Hazır Sistemler" />
+        <Button fx:id="ekrankarti" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Ekran Kartı" />
+        <Button fx:id="Anakart" style="-fx-background-color: transparent; -fx-text-fill: white;" text="Anakart" />
+        <Button fx:id="Ram" style="-fx-background-color: transparent; -fx-text-fill: white;" text="RAM" />
+        <Button fx:id="SSD" style="-fx-background-color: transparent; -fx-text-fill: white;" text="SSD" />
+        <Button fx:id="Islemci" style="-fx-background-color: transparent; -fx-text-fill: white;" text="İşlemci" />
+    </HBox>
+
+    <!-- ScrollPane ve VBox'lar üst üste (üstten boşluklu) -->
+    <ScrollPane fx:id="anakart_sp" layoutY="139.0" prefHeight="430" prefWidth="650" visible="false" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="139.0">
+        <content>
+            <VBox fx:id="anakart_vb" prefHeight="420" prefWidth="630" />
+        </content>
+    </ScrollPane>
+
+    <ScrollPane fx:id="ekrankarti_sp" layoutY="125.0" prefHeight="430" prefWidth="650" visible="false" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="125.0">
+        <content>
+            <VBox fx:id="ekrankarti_vb" prefHeight="420" prefWidth="630" />
+        </content>
+    </ScrollPane>
+
+    <ScrollPane fx:id="hazirsistemler_sp" layoutY="125.0" prefHeight="430" prefWidth="650" visible="false" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="125.0">
+        <content>
+            <VBox fx:id="hazirsistemler_vb" prefHeight="420" prefWidth="630" />
+        </content>
+    </ScrollPane>
+
+    <ScrollPane fx:id="ram_sp" layoutY="125.0" prefHeight="430" prefWidth="650" visible="false" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="125.0">
+        <content>
+            <VBox fx:id="ram_vb" prefHeight="420" prefWidth="630" />
+        </content>
+    </ScrollPane>
+
+    <ScrollPane fx:id="ssd_sp" layoutY="125.0" prefHeight="430" prefWidth="650" visible="false" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="125.0">
+        <content>
+            <VBox fx:id="ssd_vb" prefHeight="420" prefWidth="630" />
+        </content>
+    </ScrollPane>
+
+    <ScrollPane fx:id="islemci_sp" layoutY="139.0" prefHeight="430" prefWidth="650" visible="true" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="139.0">
+        <content>
+            <VBox fx:id="islemci_vb" prefHeight="420" prefWidth="630" />
+        </content>
+    </ScrollPane>
+
+    <!-- Sağdaki Filtreler -->
+    <VBox prefHeight="520" prefWidth="250" spacing="15" style="-fx-background-color: #f5f5f5;" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="90">
+        <padding>
+            <Insets bottom="10" left="10" right="10" top="10" />
+        </padding>
+        <Label style="-fx-font-weight: bold; -fx-font-size: 14;" text="Filtrele" />
+        <Label text="Fiyat Aralığı" />
+        <HBox spacing="5">
+            <TextField fx:id="minPriceField" promptText="Min TL" />
+            <TextField fx:id="maxPriceField" promptText="Max TL" />
+        </HBox>
+        <Label text="Stok Durumu" />
+        <Button onAction="#handleFilter" text="Filtrele" />
+      <Button fx:id="go_to_cart" alignment="BASELINE_RIGHT" mnemonicParsing="false" onAction="#goToCart" text="Sepete Git">
+         <opaqueInsets>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </opaqueInsets>
+      </Button>
+    </VBox>
+   <TextField fx:id="search_prod" layoutX="14.0" layoutY="90.0" prefHeight="26.0" prefWidth="199.0" promptText="Ürün Adı yazmayı dene" />
+   <Button fx:id="search_prod_button" layoutX="226.0" layoutY="91.0" mnemonicParsing="false" onAction="#search_prod_fun" text="Ara" />
+
+</AnchorPane>

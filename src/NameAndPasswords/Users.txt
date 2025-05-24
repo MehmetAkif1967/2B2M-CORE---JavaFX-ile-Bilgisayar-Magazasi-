@@ -1,0 +1,9 @@
+a@gmail.com:a:123:Erkek
+ab@gmail.com:ab:111:Erkek
+aaa@gmail.com:aaa:1234:Kadın
+abc@gmail.com:abcd:12345:Erkek
+sdfsdfsf:safsdf:dsfasdfas:Erkek
+ugabuga@gazi.edu.tr:uga buga:12345:Belirtmiyorum
+12345@gmail.com:aa:12345:Belirtmiyorum
+dfg:abc:12345:Belirtmiyorum
+b:b:b:Belirtmiyorum

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="500" prefWidth="400" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.laborer_login_con">
+
+    <VBox alignment="CENTER" layoutX="50" layoutY="30" prefWidth="300" spacing="15" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="30.0">
+        
+        <Label style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #0000ff;" text="2B2M CORE" />
+        <Label style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Hoşgeldiniz" />
+
+        <!-- Giriş türü seçimi -->
+        <HBox alignment="CENTER" spacing="20">
+            <Label text="Çalışan Girişi" />
+        </HBox>
+
+        <TextField fx:id="laborerID" maxWidth="300" promptText="Çalışan ID" />
+        <PasswordField fx:id="password" maxWidth="300" promptText="Şifre" />
+        
+        <HBox alignment="CENTER_LEFT" maxWidth="300" spacing="5" />
+        
+        <Button fx:id="loginButton" maxWidth="300" onAction="#handleLogin" style="-fx-background-color: #0000ff; -fx-text-fill: white; -fx-font-weight: bold;" text="Giriş Yap" />
+        
+        <Button fx:id="return_login" maxWidth="300" onAction="#returnLogin" style="-fx-background-color: #d6dce5; -fx-text-fill: black;" text="Geri dön" />
+    </VBox>
+   <Label fx:id="Wrong_login" layoutX="186.0" layoutY="353.0" textFill="RED" />
+</AnchorPane>
